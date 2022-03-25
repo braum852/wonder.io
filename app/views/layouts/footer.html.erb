@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <titleWonders of the World!</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<br>
+
+<footer>
+    <%= button_to "Logout", :controller=> "sessions", :action=> "destroy"%>
+    </footer>
+
+<%= yield %>
+
+</body>
+</html>
+
+#render :layout => "footer"
+
