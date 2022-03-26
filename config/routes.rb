@@ -6,14 +6,14 @@ Rails.application.routes.draw do
   
   get '/login', to: "sessions#login"
   post '/login', to: "sessions#create"
-  get '/welcome', to: "sessions#welcome"
   get '/home', to: "sessions#home"
   post  '/logout', to: 'sessions#destroy'
-  get '/logout', to: 'sessions#destroy'
 
-  resources :authors, only: [:show, :index] do
-    resources :posts, only: [:show, :index, :new, :edit]
+  resources :locations, only: [:show, :index] do
+    resources :wonders, only: [:show, :index]
   end
-  resources :posts
+  resources :wonders
 
 end
+
+#    <%= link_to "Click to reveal all seven wonders!", controller: :wonders, action: :index, method: :get %>

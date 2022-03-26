@@ -12,19 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2022_03_25_104505) do
 
-  create_table "authors", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string "name"
-    t.string "genre"
-    t.text "bio"
-    t.integer "author_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.boolean "post_status"
+    t.string "city"
+    t.string "continent"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -32,6 +23,15 @@ ActiveRecord::Schema.define(version: 2022_03_25_104505) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "wonders", force: :cascade do |t|
+    t.string "title"
+    t.integer "year_discovered"
+    t.text "description"
+    t.integer "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

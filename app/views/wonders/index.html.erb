@@ -1,0 +1,14 @@
+<br>
+<h1><b>Wonders of the world!</b></h1>
+
+<% @wonders.each do |wonder| %>
+  <div>
+    <h2><%= wonder.title %></h2>
+    <h3><%= link_to wonder.location.name, location_wonders_path(wonder.location) %></h3>
+    <p><%= wonder.description %></p>
+  </div>
+<% end %>
+<br>
+<footer>
+<%= link_to "Go back", controller: :locations, action: :index, method: :get %>
+</footer>

@@ -1,0 +1,4 @@
+<h1><%= @wonder.title %></h1>
+<p>by <%= link_to @wonder.location.name, location_path(@wonder.location) if @wonder.location %></p>
+<p><%= @wonder.description %> </p>
+

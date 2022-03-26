@@ -1,0 +1,13 @@
+<h1>Found in <%= @location.name %> lies..</h1>
+
+<% @location.wonders.each do |wonder| %>
+  <div>
+  <h2><%= wonder.title %></h2>
+  <ul>
+  <h3>Discovered in: <%= wonder.year_discovered %></h3><br>
+  <%= wonder.description %>
+  </ul>
+  </div>
+  <%= link_to "Return back", controller: :locations, action: :index, method: :get %>
+
+<% end %>

@@ -1,0 +1,13 @@
+<h1>Locations of seven wonders of the world!</h1>
+<%= link_to "Click here to see all seven wonders of the world!", controller: :wonders, action: :index, method: :get %>
+<ul>
+<h2>Click on a city to reveal what wonder lies beneath</h2>
+  <% @locations.each do |location| %>
+    <li>
+    <%= location.continent %>:
+    <%= location.name %>,
+    <%= link_to location.city, location_path(location) %></li>
+  <% end %>
+</ul>
+<br>
+
