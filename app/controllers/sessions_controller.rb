@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
     end
 
     def home
-
+        render :layout => "footer"
     end
 
     def welcome
